@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+.container{
+    padding: 28px 250px;
+    max-width: 1492px;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+@media(max-width: 1220px){
+    .container{
+        padding: 28px;
+
+    }
+}

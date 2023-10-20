@@ -1,0 +1,59 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+.showcase{
+    background-image: url(./img/IMAGE\ \(23\).png);
+    background-position: bottom;
+    background-size: cover;
+    height: 530px;
+    color: white;
+    margin: 0 30px 123px 35px;
+    
+    .showcase_main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 10px;
+        text-align: center;
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 47px;
+            line-height: 60px;
+        }
+        h4{
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 30px;
+        }
+        button{
+            width: 231px;
+            height: 33px;
+            margin-top: 38px;
+            box-shadow: 0px 2px 6px rgba(29, 31, 46, 0.1);
+            border-radius: 0px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+@media(max-width: 788px){
+    .showcase{
+        margin: 0px;
+    }
+}

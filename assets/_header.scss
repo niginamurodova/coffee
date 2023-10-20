@@ -1,0 +1,99 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+header{
+    z-index: 1000;
+    .header_main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar{
+            display: flex;
+            gap: 50px;
+            
+            input{
+                display: none;
+            }
+            label{
+                display: none;
+            }
+            #check:checked ~ nav{
+                transform: translate(0);
+                
+            }
+            nav{
+                transition: all 0.2s;
+                ul{
+                    display: flex;
+                    gap: 30px;
+                    li{
+                        a{
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 18px;
+                            color: #1D1F2E;
+                        }
+                    }
+                }
+            }
+            .header_icons{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img{
+                    cursor: pointer;
+                }
+                p{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 750px){
+    header{
+        .header_main{
+            .navbar{
+                flex-direction: row-reverse;
+                label{
+                    display: block;
+                }
+                nav{
+                    z-index: 10000;
+                    background-color: white;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 84px;
+                    width: 100vw;
+                    height: calc(100vh - 84px);
+                    transform: translate(-100%);
+                    ul{
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+
+@media(max-width: 380px){
+    header{
+        .header_main{
+            .navbar{
+                .header_icons{
+                    display: none;
+                    
+                }
+            }
+        }
+    }
+
+}

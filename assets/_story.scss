@@ -1,0 +1,102 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+.stories{
+    margin-bottom: 190px;
+    .stories_main{
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1D1F2E;
+            margin-bottom: 100px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: 5px;
+            }
+
+            &::before{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: -35px;
+
+            }
+        }
+        .stories_cards{
+            display: flex;
+            gap: 20px;
+            .story_card{
+                h1{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 32px;
+                    color: #1D1F2E;
+                    margin-bottom: 10px;
+                }
+                h5{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: rgba(29, 31, 46, 0.7);
+                    margin-bottom: 16px;
+                }
+                h6{
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #1D1F2E;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 993px){
+    .stories{
+        .stories_main{
+            .stories_cards{
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+                .story_card{
+                    img{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .stories{
+        .stories_main{
+            .stories_cards{
+                .story_card{
+                    h1{
+                        font-size: 18px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

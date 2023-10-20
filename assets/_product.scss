@@ -1,0 +1,118 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+.products{
+    margin-top: 109px;
+    .products_main{
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1D1F2E;
+            margin-bottom: 100px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: 5px;
+            }
+
+            &::before{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: -35px;
+
+            }
+        }
+        .product_photos{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 65px;
+            gap: 20px;
+            .product_photo{
+                text-align: center;
+                h2{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                h5{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: rgba(29, 31, 46, 0.7);
+
+                }
+                h4{
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: #A25F4B;
+
+                }
+                h6{
+                    display: inline-block;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    text-align: center;
+                    text-decoration-line: line-through;
+                    color: rgba(29, 31, 46, 0.4);
+                }
+                img{
+                    margin-bottom: 35px;
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width: 1035px){
+    .products{
+        .products_main{
+            .product_photos{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media(max-width: 667px){
+    .products{
+        .products_main{
+            .product_photos{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media(max-width: 341px){
+    .products{
+        .products_main{
+            .product_photos{
+                .product_photo{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

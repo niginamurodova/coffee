@@ -1,0 +1,110 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+.email{
+    background-color: #1D1F2E;
+    color: white;
+    text-align: center;
+    padding-bottom: 85px;
+    .email_main{
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 15px;
+            position: relative;
+            margin-top: 80px;
+            &::after{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: 5px;
+            }
+
+            &::before{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: -35px;
+
+            }
+        }
+        h1{
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 50px;
+        }
+        input{
+            border: 1px solid #2F303E;
+            border-radius: 0px;
+            width: 350px;
+            height: 54px;
+            padding: 18px;
+            text-align: start;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            background-color: #1D1F2E;
+            margin-right: 10px;
+            color: white;
+            outline: none;
+
+        }
+        button{
+            box-shadow: 0px 2px 6px rgba(29, 31, 46, 0.1);
+            border-radius: 0px;
+            width: 129px;
+            height: 54px;
+            color: #1D1F2E;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+@media(max-width:600px){
+    .email{
+        .email_main{
+            input{
+                width: 100%;
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:370px){
+    .email{
+        .email_main{
+            p{
+                &::after{
+                    display: none;
+                }
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}

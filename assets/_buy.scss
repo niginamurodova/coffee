@@ -1,0 +1,161 @@
+@import './variable';
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+
+.buy{
+    margin-top: 165px;
+    .buy_main{
+        
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1D1F2E;
+            margin-bottom: 100px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: 5px;
+            }
+
+            &::before{
+                position: absolute;
+                content: ' ';
+                height: 1px;
+                width: 30px;
+                background-color: #ECECED;
+                top: 45%;
+                margin-left: -35px;
+
+            }
+        }
+        .buy_cards{
+            display: flex;
+            gap: 80px;
+            
+            .buy_img{
+                display: grid;
+                gap: 20px;
+                grid-template-areas: 'buy_img1 buy_img1 buy_img2'
+                                     'buy_img1 buy_img1 buy_img3';
+                .buy_img1{
+                    grid-area: buy_img1;
+                }
+    
+                .buy_img2{
+                    grid-area: buy_img2;
+                }
+    
+                .buy_img3{
+                    grid-area: buy_img3;
+                }
+            }
+
+            .buy_text{
+                h6{
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #1D1F2E;
+                    margin-bottom: 14px;
+                }
+                h1{
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 50px;
+                    color: #1D1F2E;
+                    margin-bottom: 14px;
+                }
+                h5{
+                    font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                color: rgba(29, 31, 46, 0.7);
+                    margin-bottom: 24px;
+                }
+                button{
+                    width: 173px;
+                    height: 35px;
+                    background-color: #1D1F2E;
+                    color: white;
+
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 894px){
+    .buy{
+        .buy_main{
+            .buy_cards{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media(max-width: 494px){
+    .buy{
+        .buy_main{
+            p{
+                &::after{
+                    display: none;
+                }
+                &::before{
+                    display: none;
+                }
+            }
+            .buy_cards{
+                .buy_img{
+                    grid-template-areas: 'buy_img1 buy_img1'
+                                         'buy_img1 buy_img1'
+                                         'buy_img2 buy_img3';
+                    img{
+                        width: 100%;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.img{
+    img{
+        margin: 130px 0 100px 0;
+        width: 100vw;
+    }
+}
+
+@media(max-width: 894px){
+    .img{
+        img{
+            height: 230px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .img{
+        img{
+            height: 200px;
+            
+        }
+    }
+}
